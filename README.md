@@ -4,7 +4,7 @@ Python program for automated router modem testing over serial through SSH.
 
 Prerequisites:  
 python 3.x  
-python3-pip
+python3-pip  
 sudo pip install pyserial  
 sudo pip install paramiko  
 
