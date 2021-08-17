@@ -17,13 +17,9 @@ class Connection:
             exit(1)
         except:
             print("Connection failed")
-            logger.log.Write("Connection failed")
+            logger.log.Write("Connection failed", 0, "")
             exit(1)
-        else:
-            if ssh.get_transport() is None:
-                print("Connection failed: " + ip)
-                logger.log.Write("Connection failed: " + ip)
-                exit(1)
+
         print("Successful connection to: " + ip)
         return ssh
 
@@ -34,7 +30,7 @@ class Connection:
         ser.baudrate = baudrate
 
         if os.geteuid() != 0:
-            logger.Write("insufficient permissions (You need run script as root!)")
+            logger.Write("insufficient permissions (You need run script as root!)", 0, "")
             print("insufficient permissions (You need run script as root!)")
             exit(1)
         try:
@@ -43,7 +39,7 @@ class Connection:
             return ser
         except:
             print("Serial Connection error")
-            logger.log.Write("Connection error")
+            logger.log.Write("Connection error", 0, "")
             return None
 
 

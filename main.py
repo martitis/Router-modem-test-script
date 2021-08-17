@@ -12,6 +12,9 @@ def main():
         print("Usage: sudo python3 -D {device model}")
         exit(1)
     
+    if not os.path.isdir('./logs'):
+        os.makedirs('./logs')
+    
     productName = sys.argv[2]
     config.config.productName = sys.argv[2]
     product = config.config.getProductInfo(productName)
