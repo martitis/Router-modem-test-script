@@ -10,7 +10,7 @@ class Connection:
         ssh = paramiko.SSHClient()
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         try:
-            ssh.connect(hostname=ip, port=port,username=username, password=password)
+            ssh.connect(hostname=ip, port=port,username=username, password=password, timeout=5)
         except paramiko.AuthenticationException:
             print("SSH Authentication Error")
             logger.log.Write("SSH Authentication Error", 0, "")
