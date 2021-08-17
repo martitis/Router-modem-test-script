@@ -1,0 +1,133 @@
+{
+    "product": [
+        {
+            "name": "TRM240",
+            "config": {
+                "type":"serial",
+                "baudrate": "115200",
+                "device": "/dev/ttyUSB2"
+            },
+            "cmd_list": [
+                {
+                    "cmd": "ATI",
+                    "result": "OK",
+                    "args": ""
+                },
+                {
+                    "cmd": "AT+GMR",
+                    "result":"OK",
+                    "args": ""
+                },
+                {
+                    "cmd":"AT+CGMI",
+                    "result":"OK",
+                    "args": ""
+                },
+                {
+                    "cmd":"AT+CGMM",
+                    "result":"OK",
+                    "args": ""
+                },
+                {
+                    "cmd":"AT+CGMM",
+                    "result":"ERROR",
+                    "args": ""
+                }
+            ]
+        },
+        {
+            "name": "RUTX11",
+            "config": {
+                "type":"ssh",
+                "ip": "192.168.1.1",
+                "port": "22",
+                "username": "root",
+                "password": "admin01"
+            },
+            "cmd_list": [
+                {
+                    "cmd": "ATI",
+                    "result": "OK",
+                    "args": ""
+                },
+                {
+                    "cmd": "AT+GMR",
+                    "result":"OK",
+                    "args": ""
+                },
+                {
+                    "cmd":"AT+CGMI",
+                    "result":"OK",
+                    "args": ""
+                },
+                {
+                    "cmd":"AT+CGMM",
+                    "result":"OK",
+                    "args": ""
+                },
+                {
+                    "cmd":"AT+CGMM",
+                    "result":"ERROR",
+                    "args": ""
+                }
+            ]
+        },
+        {
+            "name": "RUT950",
+            "config": {
+                "type":"ssh",
+                "ip": "192.168.1.1",
+                "port": "22",
+                "username": "root",
+                "password": "admin01"
+            },
+            "cmd_list": [
+                {
+                    "cmd": "ATI",
+                    "result": "OK",
+                    "args": ""
+                },
+                {
+                    "cmd": "AT+GMR",
+                    "result":"OK",
+                    "args": ""
+                },
+                {
+                    "cmd":"AT+CGMI",
+                    "result":"OK",
+                    "args": ""
+                },
+                {
+                    "cmd":"AT&V",
+                    "result":"OK",
+                    "args": ""
+                },
+                {
+                    "cmd":"AT&W",
+                    "result":"OK",
+                    "args": ""
+                },
+                {
+                    "cmd":"ATZ",
+                    "result":"OK",
+                    "args": ""
+                },
+                {
+                    "cmd":"AT+CSQ",
+                    "result":"OK",
+                    "args": ""
+                },
+                {
+                    "cmd":"AT+CMGF=1",
+                    "result":"OK",
+                    "args": ""
+                },
+                {
+                    "cmd":"AT+CMGS",
+                    "result":"OK",
+                    "args": "=\"+3706\"\n\n TESTAS \\032"
+                }
+            ]
+        }
+    ]
+}
